@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes · Note‑taking app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <h1>QuickNotes</h1>
+    <div class="tagline">Capture ideas, tasks &amp; inspiration — instantly</div>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <!-- Add note card -->
+    <section class="card">
+      <h2>Add a note</h2>
+      <form id="note-form" class="note-form">
+        <div class="form-group">
+          <label for="note-input">Note text</label>
+          <input type="text" id="note-input" placeholder="Type your note here…" autocomplete="off" maxlength="300">
+        </div>
+        <div class="form-group">
+          <label for="category-select">Category</label>
+          <select id="category-select">
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Study">Study</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">Add Note</button>
+      </form>
+      <p id="error-message" class="error-message"></p>
+    </section>
+
+    <!-- Your notes card -->
+    <section class="card">
+      <h2>Your notes</h2>
+      <div class="search-wrapper">
+        <input type="search" id="search-input" placeholder="🔍 Search notes…" autocomplete="off">
+        <span id="note-count">You have no notes yet.</span>
+      </div>
+      <div id="notes-list" class="notes-list">
+        <!-- dynamic notes appear here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>QuickNotes · local storage · all notes stay on your device</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
